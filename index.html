@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Getting|Started|GIT</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="landing">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">GIT</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Banner -->
+				<section id="banner">
+					<div class="content">
+						<header>
+							<h2>Gettin Started GIT</h2>
+							<p>Project at <a href="https://fossasia.org">FOSSASIA </a> Google Code-In 2015</p>
+                            <p>Now lets start with the tour... </p>
+						</header>
+						<span class="image"><img src="images/pic01.png" alt="" /></span>
+					</div>
+					<a href="#one" class="goto-next scrolly">Next</a>
+				</section>
+
+			<!-- One -->
+				<section id="one" class="spotlight style1 bottom">
+					<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+					<div class="content">
+						<div class="container">
+							<div class="row">
+								<div class="12u 12u$(medium)">
+									<header>
+										<h2>What is GIT?</h2>
+										<p>Git is a distributed version control system. It's free, open source, and can handle various types of projects fast and efficiently, allowing groups of people to work on the same documents together. Google, Facebook, Microsoft, Twitter and Netflix are some of the many companies that use Git. It's easy to learn and can be downloaded from <a href="https://git-scm.com">here</a>. Every Git working directory is a repository (there, Git begins version controlling your files) with history and version-tracking capabilities.</p>
+									</header>
+								</div>
+						</div>
+					</div>
+					<a href="#two" class="goto-next scrolly">Next</a>
+				</section>
+
+			<!-- Two -->
+				<section id="two" class="spotlight style2 bottom">
+					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+					<div class="content">
+						<div class="container">
+                        <div class="row">
+                        	<div class="6u 12u$(medium)">
+                                	<h2>git config</h2>
+									<p>Using the <code>git config</code> command, we can specify some Git settings. One important configuration we need to make is setting the name and the email address, for example:<br>
+                                    <code>$ git config --global user.name "Foo Bar"<br>
+                                             $ git config --global user.email foo@bar.com</code><br>
+                                    Because we're using the <code>--global</code> option, Git will remember and use these informations for everything we'll be doing.</p>
+								</div>
+                                <div class="6u 12u$(medium)">
+                                	<h2>git init</h2>
+                                    <p>This command initializes a new repository, and it's usually the first one to be run, since most of the other Git commands won't work outside a repository. If my current directory is C:/Foo/, the result would look like this:<br>
+                                    <code> $ git init<br>
+    Initialized empty Git repository in C:/Foo/</code><br>
+    								This allows it to start tracking changes of the project. Typing <code>git init directory</code> will create a repository in the specified directory. Both will create a hidden .git directory, where the necessary data is contained.</p>
+							</div>
+                        </div>
+                        </div>
+					</div>
+					<a href="#three" class="goto-next scrolly">Next</a>
+				</section>
+
+			<!-- Three -->
+				<section id="three" class="spotlight style3 bottom">
+					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+					<div class="content">
+                    <div class="container">
+                    <div class="row">
+						<div class="12u 12u$(medium)">
+                                	<h2>git status</h2>
+									<p>The <code>git status</code> command will show you the state of both the working directory and the staging area (the staging area is a file that stores information about what will go into your next commit). Basically, it tells us which files are staged (ready to be commited), unstaged (not yet ready to be commited), and untracked (not yet tracked by Git). For example, let's say that I've added a <code>foo.txt</code> file to the working directory. After typing <code>git status</code>, it would look something like this:<br>
+                                    <code>$ git status<br>
+    # On branch master<br>
+    #<br>
+    # Initial commit<br>
+    #<br>
+    # Untracked files:<br>
+    #   (use "git add ..." to include in what will be committed)<br>
+    #<br>
+    #	foo.txt<br>
+    nothing added to commit but untracked files present (use "git add" to track)</code><br>
+                                    It is a good idea to run <code>git status</code> often.</p>
+								</div>
+                        </div>
+                        </div>
+					</div>
+					<a href="#four" class="goto-next scrolly">Next</a>
+				</section>
+                
+                <!-- Four -->
+				<section id="four" class="spotlight style3 bottom">
+					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+					<div class="content">
+                    <div class="container">
+                    <div class="row">
+						<div class="12u 12u$(medium)">
+                                	<h2>git add</h2>
+									<p>A change is made in the working directory. <code>git add</code> adds that change to the staging area. Basically, it tells Git that you want to include the files' updates in the next commit. So, to tell Git to start tracking changes made to <code>foo.txt</code>, we need to add it to the staging area using <code>git add</code>:<br>
+                                    <code>$ git add foo.txt<br>
+    $ git status<br>
+    # On branch master<br>
+    #<br>
+    # Initial commit<br>
+    #<br>
+    # Changes to be committed:<br>
+    #   (use "git rm --cached ..." to unstage)<br>
+    #<br>
+    #	new file:   foo.txt<br>
+    #</code><br>
+                                    Notice that it says <code>Changes to be committed</code>. This means that our file is in the staging area and ready to be committed! You can also use wildcards, for example <code>git add '*.txt'</code> will add all text files to the staging area.</p>
+								</div>
+                        </div>
+                        </div>
+					</div>
+					<a href="#five" class="goto-next scrolly">Next</a>
+				</section>
+                
+                <!-- Five -->
+				<section id="five" class="spotlight style3 bottom">
+					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+					<div class="content">
+                    <div class="container">
+                    <div class="row">
+						<div class="6u 12u$(medium)">
+                                	<h2>git commit</h2>
+									<p>To store the changes we've made so far in the repository, we run this command while also specifying what changes we have made.<br>
+                                    <code>$ git commit -m "First commit! Yay!"<br>
+    [master b00f045] First commit! Yay!<br>
+      1 file changed, 10 insertions(+), 2 deletions(-)</code><br>
+                                    And so, the staged snapshot is commited. Unlike other version control systems, Git tracks the entire content of a file in each commit, not the differences between versions, making it much faster. After making a commit, we get a message telling us the number of changed files and the number of insertions and deletions made to the file(s).</p>
+								</div>
+                         <div class="6u 12u$(medium)">
+                         	<h2>git log</h2>
+                            <p>The <code>git log</code> command shows us the committed snapshots, allowing us to see the project history. It works like a journal, remembering the changes we've committed. If we've made 2 commits, <code>git log</code> would display something similar to this:<br>
+                            <code>$ git log<br>
+    commit 3852bbeb1634463d0bb4d267edb7b3f9cd02ace1<br>
+    Author: name < email ><br>
+    Date:   Thu Dec 24 17:30:45 2015 +0200<br>
+        Add all txt files<br>
+    commit 104bedfd888cd3d5e7fcb857d0dabc5a0fcb5e28<br>
+    Author: name < email ><br>
+    Date:   Thu Dec 24 12:53:16 2015 +0200<br>
+        First commit! Yay!</code><br>
+        					Use <code>git log --summary</code> for more information about each commit.
+                            </p>
+                            </div>
+                        </div>
+                        </div>
+					</div>
+					<a href="#six" class="goto-next scrolly">Next</a>
+				</section>
+                
+                <!-- Six -->
+				<section id="six" class="spotlight style3 bottom">
+					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+					<div class="content">
+                    <div class="container">
+                    <div class="row">
+						<div class="4u 12u$(medium)">
+                                	<h2>git push</h2>
+									<p>Using this command, we are able to make transfers from our local repository to a remote one. Its general form looks like this: <br><code>git push remote branch</code> .<br>
+                                    <code> $ git push -u origin master<br>
+    Branch master set up to track remote branch master from origin.</code><br>
+                                   In the example above we pushed the changes to the <code>origin</code> repository on <a href="github.com">GitHub</a>. The -u will make Git to remember those parameters, so the next time we can simply call <code>git push</code>.</p>
+								</div>
+                         <div class="8u 12u$(medium)">
+                         	<h2>git branch</h2>
+                            <p>A branch is an independent line of development. Using the <code>git branch</code> command, we can create, rename, delete or list branches, but pay attention, you can't switch between branches (that's <code>git checkout</code>'s job, see below). Branches are used by developers so that they could work on more than one task at the same time.<br>
+                            <code> $ git branch<br>
+    * gh-pages<br>
+      master</code><br>
+        					<code>git branch</code> lists all of the branches in the repository. <code>gh-pages</code> is the current branch.<br>
+                            <code>$ git branch name</code><br>
+                            The above command creates a new branch.<br>
+                            <code>$ git branch -d name<br>
+    Deleted branch name (was b10fd05).</code><br>
+    						The above operation deletes that branch, altough Git prevents you from deleting it if it has unmerged changes. To force delete a branch, use <code>git branch -D name</code> instead.<br>
+                            <code>$ git branch -m name</code><br>
+                            Lets you rename the current branch.
+                            </p>
+                            </div>
+                        </div>
+                        </div>
+					</div>
+					<a href="#seven" class="goto-next scrolly">Next</a>
+				</section>
+                
+				<!-- Seven -->
+				<section id="seven" class="spotlight style1 bottom">
+					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+					<div class="content">
+                    <div class="container">
+                    <div class="row">
+						<div class="6u 12u$(medium)">
+                                	<h2>git checkout</h2>
+									<p>This command allows us to switch between branches (i.e between lines of development, between tasks).<br>
+                                    <code> $ git checkout name<br>
+    Switched to branch 'name'</code><br>
+                                  Once again, Git prevents you from switching to another branch before committing the changes made on the current one.<br>
+                                  <code>$ git checkout -b name<br>
+    Switched to a new branch 'name'</code><br>
+    								Creates a new branch and switches to that branch. It is equivalent with running <code>git branch name</code>+ <code>git checkout name</code>. <br>
+Using <code>git checkout -- name</code>, we are able to take the files back to their state at the last commit.
+                                  </p>
+								</div>
+                         <div class="6u 12u$(medium)">
+                         	<h2>git rebase</h2>
+                            <p>This command is used to combine, to merge changes from one branch to another branch. The following example moves the <code>gh-pages</code> branch to the tip of the <code>master</code>, and also includes the new commits in <code>master</code>. By using this command, we're getting a much cleaner project history, making it easier to navigate.<br>
+                            <code> 
+    $ git checkout gh-pages<br>
+    $ git rebase master</code><br>
+                            </p>
+                            </div>
+                        </div>
+                        </div>
+					</div>
+					<a href="#eight" class="goto-next scrolly">Next</a>
+				</section>
+                
+                <!-- Eight -->
+				<section id="eight" class="spotlight style2 bottom">
+					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+					<div class="content">
+                    <div class="container">
+                    <div class="row">
+						<div class="12u 12u$(medium)">
+                                	<h2>git stash</h2>
+									<p>The <code>git stash</code> command is used when we are working on a part of a project and we want to switch branches to work on something else, but don't want to commit the messy work we've done. Stashing will take the messy state and place in on a stack, which we are able to access later. Changes are not committed, so we can't switch to another branch. After calling <code>git stash</code>, we will get something similar to this:<br>
+                                    <code> $ git stash<br>
+    Saved working directory and index state WIP on master: 5e95fb5 Add all txt files<br>
+    HEAD is now at 5e75fb5 Add all txt files<br>
+    $ git status<br>
+    # On branch master<br>
+    nothing to commit, working directory clean</code> <br>
+Notice that after using <code>git status</code>, everything's clean, so we can switch to another branch. Using <code>git stash list</code>, we can see all the stashes on the stack.
+                                  </p>
+								</div>
+                        </div>
+                        </div>
+					</div>
+					<a href="#nine" class="goto-next scrolly">Next</a>
+				</section>
+                
+                 <!-- Nine -->
+				<section id="nine" class="spotlight style2 bottom">
+					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+					<div class="content">
+                    <div class="container">
+                    <div class="row">
+						<div class="7u 12u$(medium)">
+                                	<h2>git reset</h2>
+									<p>Using <code>git reset</code>, we can remove a number of commits from the current branch. It is a way to undo changes that are not yet shared with somebody else. The following command will make the last 3 commits be thrown away.<br>
+                                    <code> $ git checkout gh-pages<br>
+    $ git reset HEAD~3</code>. <br>
+We can also choose between the 3 options of <code>git reset</code>: <code>git reset --mixed</code> is the default option, leaving the working directory unchanged, but bringing the staging area up to date to match the commit; <code>git reset --hard</code> will bring both the working directory and the staging area up to date to match the commit, whereas <code>git reset --soft</code> will leave both the working directory and the staging area unchanged. 
+Typing in <code>git stash list</code> will show us the stack of stashes.<br>
+									<code>$ git stash list<br>
+    stash@{0}: WIP on master: 5e75fb5 message<br>
+    stash@{1}: WIP on master: c24f051 message</code><br>
+    								Use <code>git stash apply</code> to apply the most recent stash. You can also type in <code>git stash apply stash@{number}</code> to apply a specific stash.<br>
+                                    
+                                  </p>
+								</div>
+                                <div class="5u 12u$(medium)">
+                                	<code>$ git stash apply<br>
+    # On branch master<br>
+    # Changes not staged for commit:<br>
+    #   (use "git add ..." to update what will be committed)<br>
+    #<br>
+    #      modified:   foo.txt<br>
+    #</code><br>
+    								Let's commit one last time:<br>
+                                    <code> $ git add foo.txt<br>
+    $ git commit -m "We're finished!"<br>
+    [master b20a045] We're finished!<br>
+      1 file changed, 6 insertions(+), 2 deletions(-)</code><br>
+                                  </p>
+								</div>
+                        </div>
+                        </div>
+					</div>
+					<a href="#ten" class="goto-next scrolly">Next</a>
+				</section>
+
+			<!-- Ten -->
+				<section id="ten" class="wrapper style1 special fade-up">
+					<div class="container">
+						<header class="major">
+							<h2>That's it, Congratulations!</h2>
+							<p>You are now ready for outer world with a beginner under standing of GIT.</p>
+						</header>
+						<div class="box alt">
+							<div class="row">
+								<section class="12u 12u$(medium)">
+									<span class="icon alt major fa-paper-plane"></span>
+									<h3>Not enough!</h3>
+									<p>Is this tutorial not enough, no problem you can go to other sites. Here is one provided for you.</p>
+								</section>
+							</div>
+						</div>
+						<footer class="major">
+							<ul class="actions">
+								<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Git-Basics" class="button">Explore</a></li>
+							</ul>
+						</footer>
+					</div>
+				</section>
+
+			<!-- Five -->
+				<section id="five" class="wrapper style2 special fade">
+					<div class="container">
+						<header>
+							<h2>#GCI #FOSSASIA</h2>
+							<p>This project is part of FOSSASIA Google Code-In.</p>
+						</header>
+						<ul class="actions">
+								<li><a href="fossasia.org" class="button special">fossasia.org</a></li>
+							</ul>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://twitter.com/NxtbigAditya" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://web.facebook.com/cuteaditya1" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.linkedin.com/in/sulphuric" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/S-ulphuric" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="nxtbig@live.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Aditya Singh. All rights reserved.</li><li>Designed by Aditya Singh</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
